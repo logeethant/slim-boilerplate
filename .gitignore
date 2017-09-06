@@ -1,0 +1,11 @@
+# System
+/app/Parameters.php
+/logs/
+!/logs/.gitkeep
+
+# Composer
+/vendor/
+
+# Docker
+/.docker/
+docker-compose.yml

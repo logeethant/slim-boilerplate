@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+class Parameters
+{
+    const SYSTEM = [
+        'debug' => true
+    ];
+
+    const DATABASE = [
+        'host' => '',
+        'dbname' => '',
+        'user' => '',
+        'pass' => '',
+        'charset' => ''
+    ];
+}
