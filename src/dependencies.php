@@ -4,8 +4,7 @@ $container = $app->getContainer();
 
 $container['view'] = function ($container) {
     $twig = new \Slim\Views\Twig($container->settings['view']['path'], $container->settings['view']['twig']);
-    $basePath = rtrim(str_ireplace('index.php', '', $container->request->getUri()->getBasePath()), '/');
-    $twig->addExtension(new \Slim\Views\TwigExtension($container->router, $basePath));
+    $twig->addExtension(new \Slim\Views\TwigExtension($container->router, $container->request->getUri()));
     $twig->addExtension(new \Twig_Extension_Debug());
     return $twig;
 };
