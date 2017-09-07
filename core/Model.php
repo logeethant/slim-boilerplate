@@ -3,7 +3,7 @@
 namespace Core;
 
 use \PDO;
-use \App\Config;
+use \App\Parameters;
 
 class Model
 {
@@ -12,7 +12,7 @@ class Model
         static $db = null;
 
         if ($db === null) {
-            $db = new PDO('mysql:host=' . Config::DATABASE['host'] . ';dbname=' . Config::DATABASE['dbname'] . ';charset=' .Config::DATABASE['charset'], Config::DATABASE['user'], Config::DATABASE['pass'], [
+            $db = new PDO('mysql:host=' . Parameters::DATABASE['host'] . ';dbname=' . Parameters::DATABASE['dbname'] . ';charset=' .Parameters::DATABASE['charset'], Parameters::DATABASE['user'], Parameters::DATABASE['pass'], [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]);

@@ -2,11 +2,11 @@
 
 return [
     'settings' => [
-        'displayErrorDetails' => \App\Config::SYSTEM['debug'],
+        'displayErrorDetails' => \App\Parameters::SYSTEM['debug'],
         'addContentLengthHeader' => false,
         'view' => [
             'twig' => [
-                'debug' => \App\Config::SYSTEM['debug']
+                'debug' => \App\Parameters::SYSTEM['debug']
             ],
             'path' => __DIR__ . '/../app/Views'
         ],

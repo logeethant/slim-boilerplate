@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Config extends \App\Parameters
+class Config
 {
-    
+
 }
