@@ -1,6 +1,6 @@
 # System
 /app/Parameters.php
-/logs/
+/logs/*
 !/logs/.gitkeep
 
 # Composer
