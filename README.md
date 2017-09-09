@@ -27,4 +27,3 @@ const ROLES = [
 //...
 ```
 These constants can be called anywhere by using `\App\Config::CONSTANT['key']` or `\App\Config::ROLES[1]` for example.
-Be careful not to override the predefined constants set in the `Parameters.php` file as this file extends from it.
