@@ -2,8 +2,8 @@
 
 namespace Core;
 
-use \PDO;
 use \App\Parameters;
+use \Doctrine\DBAL;
 
 class Model
 {
@@ -12,10 +12,8 @@ class Model
         static $db = null;
 
         if ($db === null) {
-            $db = new PDO('mysql:host=' . Parameters::DATABASE['host'] . ';dbname=' . Parameters::DATABASE['dbname'] . ';charset=' .Parameters::DATABASE['charset'], Parameters::DATABASE['user'], Parameters::DATABASE['pass'], [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-            ]);
+            $config = new DBAL\Configuration();
+            $db = DBAL\DriverManager::getConnection(Parameters::DATABASE, $config);
         }
 
         return $db;
