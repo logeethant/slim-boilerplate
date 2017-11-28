@@ -1,8 +1,7 @@
 <?php
 
-namespace Core;
+namespace Source;
 
-use \App\Parameters;
 use \Doctrine\DBAL;
 
 class Model
@@ -13,7 +12,7 @@ class Model
 
         if ($db === null) {
             $config = new DBAL\Configuration();
-            $db = DBAL\DriverManager::getConnection(Parameters::DATABASE, $config);
+            $db = DBAL\DriverManager::getConnection(\Source\Parameters::get('database'), $config);
         }
 
         return $db;

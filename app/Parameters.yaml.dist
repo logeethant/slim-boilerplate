@@ -1,0 +1,10 @@
+system:
+  debug: true
+
+database:
+  host: ''
+  dbname: ''
+  user: ''
+  password: ''
+  charset: ''
+  driver: ''

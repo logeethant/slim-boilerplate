@@ -1,6 +1,8 @@
 <?php
 
-namespace Core;
+namespace Source;
+
+use \Monolog\Logger;
 
 class Settings
 {
@@ -10,18 +12,17 @@ class Settings
     {
         $this->settings = [
             'settings' => [
-                'displayErrorDetails' => \App\Parameters::SYSTEM['debug'],
-                'addContentLengthHeader' => false,
+                'displayErrorDetails' => \Source\Parameters::get('system')['debug'],
                 'view' => [
                     'twig' => [
-                        'debug' => \App\Parameters::SYSTEM['debug']
+                        'debug' => \Source\Parameters::get('system')['debug']
                     ],
                     'path' => __DIR__ . '/../app/Views'
                 ],
                 'logger' => [
                     'name' => 'APPLICATION',
                     'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/application.log',
-                    'level' => \Monolog\Logger::DEBUG
+                    'level' => Logger::DEBUG
                 ]
             ]
         ];

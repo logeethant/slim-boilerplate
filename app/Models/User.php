@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class User extends \Core\Model
+class User extends \Source\Model
 {
     public function getAll()
     {

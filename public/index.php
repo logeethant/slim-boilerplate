@@ -2,4 +2,4 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-new \Core\Bootstrap();
+new \Source\Bootstrap();

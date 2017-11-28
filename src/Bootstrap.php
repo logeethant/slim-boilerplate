@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace Source;
 
 class Bootstrap
 {
@@ -8,11 +8,11 @@ class Bootstrap
     {
         session_start();
 
-        $settings = new \Core\Settings();
+        $settings = new \Source\Settings();
         $app = new \Slim\App($settings->load());
 
-        new \Core\Dependencies($app);
-        new \Core\Routes($app);
+        new \Source\Dependencies($app);
+        new \Source\Routes($app);
 
         $app->run();
     }
