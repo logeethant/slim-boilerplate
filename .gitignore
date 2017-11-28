@@ -7,6 +7,9 @@
 /vendor/
 composer.lock
 
-# Docker
-/.docker/
-docker-compose.yml
+# Vagrant
+/.vagrant/
+after.sh
+aliases
+Homestead.yaml
+Vagrantfile
