@@ -16,16 +16,16 @@ class Settings
                 'displayErrorDetails' => Parameters::get('system')['debug'],
                 'view' => [
                     'twig' => [
-                        'debug' => Parameters::get('system')['debug']
+                        'debug' => Parameters::get('system')['debug'],
                     ],
-                    'path' => __DIR__ . '/../app/Views'
+                    'path' => __DIR__ . '/../app/Views',
                 ],
                 'logger' => [
                     'name' => 'APPLICATION',
-                    'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/application.log',
-                    'level' => Logger::DEBUG
-                ]
-            ]
+                    'path' =>  __DIR__ . '/../logs/application.log',
+                    'level' => Logger::DEBUG,
+                ],
+            ],
         ];
     }
 
