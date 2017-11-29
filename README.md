@@ -1,5 +1,5 @@
 # Boilerplate for Slim Framework
-Works out-of-the-box with my [Docker PHP Boilerplate](https://github.com/royklutman/docker-php-boilerplate).
+Works out-of-the-box with Laravel's Homestead.
 ## Installation
 Clone or download this repository:
 ```
@@ -7,7 +7,8 @@ git clone https://github.com/royklutman/slim-boilerplate
 ```
 Update/install Composer dependencies:
 ```
-composer update (--no-dev if not using Laravel Homestead)
+composer update
+composer update --no-dev (if not using Laravel's Homestead)
 ```
 ## Configuration
 Rename or copy `app/Parameters.yaml.dist` to `app/Parameters.yaml` and customize its parameters.
