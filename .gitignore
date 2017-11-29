@@ -7,7 +7,7 @@
 /vendor/
 composer.lock
 
-# Vagrant
+# Vagrant/Homestead
 /.vagrant/
 after.sh
 aliases
