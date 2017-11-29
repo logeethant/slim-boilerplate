@@ -12,7 +12,8 @@ composer update --no-dev (if not using Laravel Homestead)
 ```
 When using Laravel Homestead, run commands below after updating composer's dependencies:
 ```
-vendor/bin/homestead make
+vendor/bin/homestead make (to create the Homestead configuration file)
+vagrant box add laravel/homestead (if you haven't installed the box yet)
 vagrant up
 ```
 ## Configuration
