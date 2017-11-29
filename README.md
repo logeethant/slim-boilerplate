@@ -1,14 +1,19 @@
 # Boilerplate for Slim Framework
-Works out-of-the-box with Laravel's Homestead.
+Works out-of-the-box with Laravel Homestead.
 ## Installation
 Clone or download this repository:
 ```
 git clone https://github.com/royklutman/slim-boilerplate
 ```
-Update/install Composer dependencies:
+Update/install Composer's dependencies:
 ```
 composer update
-composer update --no-dev (if not using Laravel's Homestead)
+composer update --no-dev (if not using Laravel Homestead)
+```
+When using Laravel Homestead, run commands below after updating composer's dependencies:
+```
+vagrant box add laravel/Homestead
+vagrant up
 ```
 ## Configuration
 Rename or copy `app/Parameters.yaml.dist` to `app/Parameters.yaml` and customize its parameters.
