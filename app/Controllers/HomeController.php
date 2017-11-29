@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
-class HomeController extends \Source\Controller
+use Source\Controller;
+
+class HomeController extends Controller
 {
     public function __invoke($request, $response, $args)
     {

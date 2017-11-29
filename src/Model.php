@@ -2,6 +2,10 @@
 
 namespace Source;
 
+use Doctrine\DBAL\Configuration;
+use Doctrine\DBAL\DriverManager;
+use Source\Parameters;
+
 class Model
 {
     public function getDB()
@@ -9,8 +13,8 @@ class Model
         static $db = null;
 
         if ($db === null) {
-            $config = new \Doctrine\DBAL\Configuration();
-            $db = \Doctrine\DBAL\DriverManager::getConnection(\Source\Parameters::get('database'), $config);
+            $config = new Configuration();
+            $db = DriverManager::getConnection(Parameters::get('database'), $config);
         }
 
         return $db;

@@ -2,17 +2,19 @@
 
 namespace Source;
 
+use Slim\App;
+
 class Bootstrap
 {
     public function __construct()
     {
         session_start();
 
-        $settings = new \Source\Settings();
-        $app = new \Slim\App($settings->load());
+        $settings = new Settings();
+        $app = new App($settings->load());
 
-        new \Source\Dependencies($app);
-        new \Source\Routes($app);
+        new Dependencies($app);
+        new Routes($app);
 
         $app->run();
     }

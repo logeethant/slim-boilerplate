@@ -2,11 +2,13 @@
 
 namespace Source;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Parameters
 {
     public static function get($parameter)
     {
-        $parsed = \Symfony\Component\Yaml\Yaml::parse(file_get_contents('../app/Parameters.yaml'));
+        $parsed = Yaml::parse(file_get_contents('../app/Parameters.yaml'));
         return $parsed[$parameter];
     }
 }

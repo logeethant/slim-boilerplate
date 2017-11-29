@@ -2,10 +2,12 @@
 
 namespace Source;
 
+use App\Controllers;
+
 class Routes
 {
     public function __construct($app)
     {
-        $app->get('/', \App\Controllers\HomeController::class);
+        $app->get('/', Controllers\HomeController::class);
     }
 }
