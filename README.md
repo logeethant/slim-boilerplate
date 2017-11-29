@@ -7,7 +7,7 @@ git clone https://github.com/royklutman/slim-boilerplate
 ```
 Update/install Composer dependencies:
 ```
-composer update
+composer update (--no-dev if not using Laravel Homestead)
 ```
 ## Configuration
 Rename or copy `app/Parameters.yaml.dist` to `app/Parameters.yaml` and customize its parameters.
