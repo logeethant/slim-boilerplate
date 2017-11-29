@@ -4,8 +4,10 @@
         "slim/twig-view": "^2.2",
         "monolog/monolog": "^1.23",
         "doctrine/dbal": "^2.5",
-        "laravel/homestead": "^6.6",
         "symfony/yaml": "^3.3"
+    },
+    "require-dev": {
+        "laravel/homestead": "^6.6"
     },
     "autoload": {
         "psr-4": {

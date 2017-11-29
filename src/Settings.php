@@ -2,8 +2,6 @@
 
 namespace Source;
 
-use \Monolog\Logger;
-
 class Settings
 {
     private $settings;
@@ -22,7 +20,7 @@ class Settings
                 'logger' => [
                     'name' => 'APPLICATION',
                     'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/application.log',
-                    'level' => Logger::DEBUG
+                    'level' => \Monolog\Logger::DEBUG
                 ]
             ]
         ];
