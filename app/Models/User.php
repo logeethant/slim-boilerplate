@@ -6,7 +6,7 @@ use Source\Model;
 
 class User extends Model
 {
-    public function getAll()
+    public static function getAll()
     {
         $db = static::getDB();
         $stmt = $db->prepare('SELECT * FROM user');

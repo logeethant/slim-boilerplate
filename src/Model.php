@@ -8,7 +8,7 @@ use Config\Parameters;
 
 class Model
 {
-    public function getDB()
+    public static function getDB()
     {
         static $db = null;
 
