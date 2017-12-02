@@ -1,5 +1,5 @@
 # System
-/app/Parameters.yaml
+/config/Parameters.php
 /logs/*
 !/logs/.gitkeep
 

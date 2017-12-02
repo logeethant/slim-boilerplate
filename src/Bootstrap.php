@@ -3,6 +3,7 @@
 namespace Source;
 
 use Slim\App;
+use Config\Routes;
 
 class Bootstrap
 {

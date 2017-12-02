@@ -2,7 +2,7 @@
 
 namespace Source;
 
-use Source\Parameters;
+use Config\Parameters;
 use Monolog\Logger;
 
 class Settings
@@ -13,10 +13,10 @@ class Settings
     {
         $this->settings = [
             'settings' => [
-                'displayErrorDetails' => Parameters::get('system')['debug'],
+                'displayErrorDetails' => Parameters::SYSTEM['debug'],
                 'view' => [
                     'twig' => [
-                        'debug' => Parameters::get('system')['debug'],
+                        'debug' => Parameters::SYSTEM['debug'],
                     ],
                     'path' => __DIR__ . '/../app/Views',
                 ],
