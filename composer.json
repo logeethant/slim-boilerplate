@@ -3,8 +3,7 @@
         "slim/slim": "^3.8",
         "slim/twig-view": "^2.2",
         "monolog/monolog": "^1.23",
-        "doctrine/dbal": "^2.5",
-        "symfony/yaml": "^3.4"
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "laravel/homestead": "^7.0"
